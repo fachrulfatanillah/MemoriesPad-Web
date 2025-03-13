@@ -1,0 +1,349 @@
+.container {
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen horizontal */
+}
+
+/* Container untuk title */
+.container-title {
+    margin-top: 20vh;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    /* background-color: rgb(236, 16, 16); */
+}
+
+/* Pusatkan konten title */
+.container-title .content-title {
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+}
+
+.content-title h1 {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* Container untuk button */
+.container-button-download {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center; /* Pusatkan button secara horizontal */
+    gap: 20px; /* Tambahkan jarak antar tombol */
+    flex-wrap: wrap; /* Agar tombol tetap rapi di layar kecil */
+}
+
+/* Styling button */
+.container-button-download .button-download,
+.container-button-download .button-figma {
+    background-color: #00b7ff;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    text-align: center;
+    text-decoration: none; /* Hilangkan garis bawah untuk link */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+/* Warna khusus untuk button Figma */
+.container-button-download .button-figma {
+    background-color: #b1b1b1;
+    color: #ffffff;
+}
+
+/* Efek hover */
+.container-button-download .button-download:hover,
+.container-button-download .button-figma:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container-button-download .button-download:hover {
+    background-color: #00bcd4;
+}
+
+.container-button-download .button-figma:hover {
+    background-color: #bdbdbd;
+}
+
+/* Efek klik */
+.container-button-download .button-download:active,
+.container-button-download .button-figma:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container untuk background photo */
+.container-photo-background {
+    margin-top: 10vh;
+    height: 90vh;
+    width: 80%;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative; /* Penting untuk mengatur posisi overlay */
+}
+
+/* Gambar utama (background) */
+.img-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2em;
+    position: absolute; /* Pastikan berada di posisi paling bawah */
+    z-index: 1;
+}
+
+/* Gambar overlay */
+.img-overlay {
+    max-width: 90%;  /* Batasi gambar overlay agar tidak terlalu besar */
+    max-height: 90%; /* Sesuaikan dengan tinggi container */
+    object-fit: contain; /* Pastikan gambar tidak terdistorsi */
+    position: absolute; /* Tetap berada di atas background */
+    z-index: 2; /* Pastikan berada di atas background */
+}
+
+/* Container feature */
+.container-feature {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5vh auto;
+    border-radius: 1em;
+    height: 50vh;
+}
+
+/* Mode reverse (gambar di kiri, teks di kanan) */
+.container-feature.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Bagian teks */
+.feature-left {
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Bagian gambar */
+.feature-right {
+    width: 55%;
+    height: 25em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gambar */
+.img-background-feature {
+    width: 100%;
+    border-radius: 1em;
+}
+
+
+/* Container untuk heading */
+.container-heading {
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Pusatkan secara horizontal */
+    /* background-color: rgb(236, 16, 16); */
+}
+
+/* Pusatkan konten heading */
+.container-heading .content-heading {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.content-heading h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* ======== Responsive Styles ======== */
+
+/* Tablet (lebar kurang dari 1024px) */
+@media screen and (max-width: 1024px) {
+    .container-title .content-title {
+        width: 70%;
+    }
+
+    .content-title h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile (lebar kurang dari 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px; /* Tambahkan padding agar tidak terlalu rapat ke tepi */
+    }
+
+    .container-title {
+        margin-top: 0vh;
+        padding: 15px 0;
+    }
+
+    .container-title .content-title {
+        width: 90%; /* Lebarkan agar teks tidak kepotong */
+    }
+
+    .content-title h1 {
+        font-size: 1.8rem; /* Sesuaikan ukuran teks */
+    }
+
+    .container-button-download {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-button-download .button-download,
+    .container-button-download .button-figma {
+        width: 100%;
+        max-width: 250px;
+        height: 50px;
+    }
+    .container-button-download .button-figma {
+        font-size: 1em;
+    }
+
+    .container-photo-background {
+        height: 50vh;
+        width: 90%;
+    }
+
+    .content-heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-feature {
+        flex-direction: column !important; /* Pastikan vertikal */
+        align-items: center;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /* Override untuk mode reverse agar tetap stack */
+    .container-feature.reverse {
+        flex-direction: column !important;
+    }
+
+    /* Feature-left di atas */
+    .feature-left {
+        width: 90%;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* Feature-right tetap di bawah */
+    .feature-right {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+/* Extra Small Mobile (lebar kurang dari 480px) */
+@media screen and (max-width: 480px) {
+    .container-title {
+        width: 100%;
+    }
+    .content-title h1 {
+        font-size: 1.5rem; /* Sesuaikan teks agar tetap terbaca */
+    }
+
+    .container-title .content-title {
+        width: 95%; /* Lebarkan hampir penuh layar */
+    }
+
+    .container-button-download .button-download,
+    .container-button-download .button-figma {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .container-photo-background {
+        height: 40vh;
+        width: 100%;
+        border-radius: 1em;
+    }
+
+    .img-background {
+        border-radius: 1em;
+    }
+
+    .content-heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .container-feature {
+        width: 90%;
+        flex-direction: column !important;
+        align-items: center;
+        height: auto;
+    }
+
+    /* Override untuk mode reverse agar tetap stack */
+    .container-feature.reverse {
+        flex-direction: column !important;
+    }
+
+    /* Feature-left di atas */
+    .feature-left {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    .feature-left h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .feature-left p {
+        font-size: 1rem;
+    }
+
+    /* Feature-right tetap di bawah */
+    .feature-right {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
