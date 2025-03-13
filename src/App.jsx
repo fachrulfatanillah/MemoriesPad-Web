@@ -3,6 +3,7 @@ import './App.css'
 
 import Navbar from './navbar/Navbar';
 import Container from './pages/home/Home';
+import FooterContainer from './footer/Footer';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Navbar/>
       <Container/>
+      <FooterContainer />
     </>
   )
 }
