@@ -1,5 +1,11 @@
 import './Home.css'
 
+function Home() {
+    return(
+        <Container />
+    );
+}
+
 function Container() {
     return(
         <div className="container">
@@ -10,27 +16,27 @@ function Container() {
             <ContainerFeature 
                 title="Store Unlimited Notes"
                 text="There are no limits to your ideas and inspirations. With Memories Pad, you can save as many notes as you need without worrying about running out of space, keeping all your thoughts and important information neatly organized in one place."
-                imgBg="/background-windows/background.jpg"
-                imgOverlay="/background-windows/add_note.png"
+                imgBg="/background-windows/background.webp"
+                imgOverlay="/background-windows/add_note.webp"
             />
             <ContainerFeature 
                 title="Stay on Top with Pin"
                 text="Keep your notes always visible! With the pin feature, your note stays on top of other windows, ensuring it never gets lost behind. Just click the pin, and your note will remain in front, no matter what you're working on."
-                imgBg="/background-windows/background.jpg"
-                imgOverlay="/background-windows/Stay-on-Top-with-Pin.png"
+                imgBg="/background-windows/background.webp"
+                imgOverlay="/background-windows/Stay-on-Top-with-Pin.webp"
                 reverse={true}
             />
             <ContainerFeature 
                 title="Personalize Your Notes"
                 text="Make your notes truly yours! Choose from a variety of colors to organize your notes the way you like. With just a tap, switch between different colors to match your style and preferences."
-                imgBg="/background-windows/background.jpg"
-                imgOverlay="/background-windows/Personalize-Your-Notes.png"
+                imgBg="/background-windows/background.webp"
+                imgOverlay="/background-windows/Personalize-Your-Notes.webp"
             />
             <ContainerFeature 
                 title="Access Anytime"
                 text="No internet? No problem! Memories Pad stores your notes locally, requiring no internet connection. You can access and edit your notes anytime, anywhere, with complete freedom."
-                imgBg="/background-windows/background.jpg"
-                imgOverlay="/background-windows/Access-Anytime.png"
+                imgBg="/background-windows/background.webp"
+                imgOverlay="/background-windows/Access-Anytime.webp"
                 reverse={true}
             />
         </div>
@@ -64,10 +70,10 @@ function ContainerPhotoBackground() {
     return(
         <div className="container-photo-background">
             {/* Gambar utama sebagai background */}
-            <img src="/background-windows/background.jpg" alt="background windows" className="img-background" />
+            <img src="/background-windows/background.webp" alt="background windows" className="img-background" />
 
             {/* Gambar kedua sebagai overlay */}
-            <img src="/background-windows/MemoriesPad.PNG" alt="overlay" className="img-overlay" />
+            <img src="/background-windows/MemoriesPad.webp" alt="overlay" className="img-overlay" />
         </div>
     );
 }
@@ -100,4 +106,4 @@ function ContainerFeature({ title, text, imgBg, imgOverlay, reverse = false }) {
     );
 }
 
-export default Container;
+export default Home;
