@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from 'react'
-import './App.css'
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
 
 import Navbar from './navbar/Navbar';
 import Home from './pages/home/Home';
@@ -9,18 +8,17 @@ import InstallationGuide from './pages/installation-guide/Installation_guide';
 import About from "./pages/about/About";
 
 function App() {
-
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/installation-guide" element={<InstallationGuide />} />
-      <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/installation-guide" element={<InstallationGuide />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <FooterContainer />
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

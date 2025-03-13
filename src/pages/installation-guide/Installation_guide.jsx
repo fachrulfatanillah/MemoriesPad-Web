@@ -37,13 +37,24 @@ function Installation(){
             <div className="right-column">
                 <h3>On This Page</h3>
                 <div className="nav-links">
-                    <a href="#step1">Download the App</a>
-                    <a href="#step2">Install the App</a>
-                    <a href="#step3">Launch and Configure</a>
+                    <a href="#step1" onClick={(e) => smoothScroll(e, "step1")}>Download the App</a>
+                    <a href="#step2" onClick={(e) => smoothScroll(e, "step2")}>Install the App</a>
+                    <a href="#step3" onClick={(e) => smoothScroll(e, "step3")}>Launch and Configure</a>
                 </div>
             </div>
         </div>
     );
+}
+
+function smoothScroll(event, targetId) {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+        const yOffset = -80; // Ubah nilai ini sesuai kebutuhan (misalnya -100 untuk lebih ke atas)
+        const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }
 }
 
 export default InstallationGuide;

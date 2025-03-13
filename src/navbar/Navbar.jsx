@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import './Navbar.css';
 
 
@@ -22,9 +23,9 @@ const Navbar = () => {
             </a>
                 <button className="menu-toggle" onClick={toggleMenu}>☰</button>
                 <ul className={menuOpen ? "show" : ""}>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/installation-guide">Installation-Guide</a></li>
-                    <li><a href="/about">About</a></li>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/installation-guide">Installation Guide</Link></li>
+                  <li><Link to="/about">About</Link></li>
                 </ul>
                 <div className={`overlay ${menuOpen ? "show" : ""}`} onClick={closeMenu}></div>
             </nav>
