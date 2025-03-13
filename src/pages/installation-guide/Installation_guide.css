@@ -1,8 +1,110 @@
 .container-installation-guide {
-    width: 100vw;
-    height: 100vh;
-    background-color: #606060;
+    margin-top: 3.7em;
+    width: 100%;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.installation {
+    margin-top: 1rem;
+    width: 80%;
+    /* background-color: #aa2222; */
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.left-column {
+    flex: 4;
+    color: #000000;
+    text-align: justify;
+    margin-right: 250px; /* beri jarak sesuai lebar right-column + jarak kanan */
+  }
+
+
+.tutorial-image {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.right-column {
+    position: fixed;
+    top: 6rem;
+    right: 10rem; /* jarak dari kanan layar */
+    width: 220px; /* tentukan ukuran tetap */
+    color: #000000;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+
+.right-column h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #87cefa;
+}
+
+
+/* ======== Responsive Styles ======== */
+
+/* Tablet (lebar kurang dari 1024px) */
+@media screen and (max-width: 1124px) {
+    .installation {
+        width: 90%;
+    }
+    .right-column {
+        display: none;
+    }
+    .left-column {
+        flex: 4;
+        color: #000000;
+        text-align: justify;
+        margin-right: 0px; /* beri jarak sesuai lebar right-column + jarak kanan */
+      }
+}
+
+/* Mobile (lebar kurang dari 768px) */
+@media screen and (max-width: 768px) {
+    .container-installation-guide {
+        margin-top: 0em;
+    }
+    
+}
+
+/* Extra Small Mobile (lebar kurang dari 480px) */
+@media screen and (max-width: 480px) {
+    .installation {
+        width: 100%;
+    }
 }
