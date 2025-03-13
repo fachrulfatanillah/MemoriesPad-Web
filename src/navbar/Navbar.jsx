@@ -24,6 +24,7 @@ const Navbar = () => {
                 <ul className={menuOpen ? "show" : ""}>
                     <li><a href="/">Home</a></li>
                     <li><a href="/installation-guide">Installation-Guide</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
                 <div className={`overlay ${menuOpen ? "show" : ""}`} onClick={closeMenu}></div>
             </nav>

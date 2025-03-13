@@ -1,0 +1,134 @@
+.container-about {
+    width: 100vw;
+    margin-top: 3.8em;
+    /* background-color: #606060; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.container-about-title {
+    width: 80%;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-content-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.border-bottom-about {
+    width: 80%;
+    padding-top: 1em;
+    border-bottom: 1px solid gray;
+}
+
+.container-about-sub-title {
+    width: 80%;
+    padding-top: 1.5em;
+}
+
+.container-about-paragraph {
+    width: 80%;
+    padding-top: 1em;
+}
+
+.container-about-paragraph p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.container-button-download-about {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: flex-start; /* Posisi tombol ke ujung kiri */
+    align-items: center;
+    width: 100%; /* Agar fleksibel dan tidak terpusat */
+}
+
+.download-button {
+    background-color: #00b7ff;
+    color: white; /* Warna teks putih agar lebih kontras */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    margin-bottom: 1em;
+}
+
+/* Efek hover */
+.download-button:hover {
+    background-color: #0096d6;
+    transform: scale(1.05); /* Efek membesar sedikit saat hover */
+}
+
+/* Efek saat ditekan */
+.download-button:active {
+    transform: scale(0.98); /* Sedikit mengecil saat diklik */
+}
+
+/* ======== Responsive Styles ======== */
+
+/* Tablet (lebar kurang dari 1024px) */
+@media screen and (max-width: 1024px) {
+    .container-about-title {
+        width: 100%;
+        padding: 4em;
+        text-align: center;
+    }
+}
+
+/* Mobile (lebar kurang dari 768px) */
+@media screen and (max-width: 768px) {
+    .container-about-title {
+        width: 100%;
+        padding: 2.5em;
+        text-align: center;
+    }
+
+    .container-about-title h1 {
+        font-size: 2em;
+    }
+
+    .container-about-sub-title h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Extra Small Mobile (lebar kurang dari 480px) */
+@media screen and (max-width: 480px) {
+    .container-about-title {
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .container-about-title h1 {
+        font-size: 1.5em;
+    }
+
+    .container-about-sub-title h2 {
+        font-size: 1.3em;
+    }
+
+    .container-about-paragraph p {
+        font-size: 1em;
+    }
+}
