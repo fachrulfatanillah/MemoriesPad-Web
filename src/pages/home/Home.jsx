@@ -91,13 +91,11 @@ function ContainerHeading({ text }) {
 function ContainerFeature({ title, text, imgBg, imgOverlay, reverse = false }) {
     return (
         <div className={`container-feature ${reverse ? "reverse" : ""}`}>
-            {/* Bagian Kiri atau Kanan (Text) */}
             <div className="feature-left">
                 <h2>{title}</h2>
                 <p>{text}</p>
             </div>
 
-            {/* Bagian Kanan atau Kiri (Gambar) */}
             <div className="feature-right">
                 <img src={imgBg} alt="background" className="img-background-feature" />
                 <img src={imgOverlay} alt="overlay" className="img-overlay" />
